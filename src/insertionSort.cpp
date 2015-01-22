@@ -1,6 +1,6 @@
-#include <vector>
+#include "insertionSort.h"
 
-std::vector<int> insertionSort(std::vector<int> &v) {
+void insertionSort(std::vector<int> &v) {
     for(int j = 1, n = v.size(); j < n; ++j) {
         int key = v[j];
         int i = j - 1;
@@ -10,10 +10,9 @@ std::vector<int> insertionSort(std::vector<int> &v) {
         }
         v[i+1] = key;
     }
-    return v;
 }
 
-std::vector<int> insertionSortDesc(std::vector<int> &v) {
+void insertionSortDesc(std::vector<int> &v) {
     for(int j = 1, n = v.size(); j < n; ++j) {
         int key = v[j];
         int i = j - 1;
@@ -23,5 +22,4 @@ std::vector<int> insertionSortDesc(std::vector<int> &v) {
         }
         v[i+1] = key;
     }
-    return v;
 }

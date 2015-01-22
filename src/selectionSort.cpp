@@ -1,6 +1,6 @@
-#include <vector>
+#include "selectionSort.h"
 
-std::vector<int> selectionSort(std::vector<int> &v) {
+void selectionSort(std::vector<int> &v) {
     for(int i=0, n=v.size(); i<n-1; ++i) {
         int c = v[i];
         int pos = i;
@@ -13,5 +13,4 @@ std::vector<int> selectionSort(std::vector<int> &v) {
         v[pos] = v[i];
         v[i] = c;
     }
-    return v;
 }
