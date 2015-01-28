@@ -73,9 +73,12 @@ insertionSort.o: $(USER_DIR)/insertionSort.cpp $(GTEST_HEADERS)
 selectionSort.o: $(USER_DIR)/selectionSort.cpp $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/selectionSort.cpp
 
+heapSort.o: $(USER_DIR)/heapSort.cpp $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/heapSort.cpp
+
 unittest.o : $(USER_DIR)/unittest.cpp \
                      $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/unittest.cpp
 
-sorttest: insertionSort.o selectionSort.o unittest.o gtest_main.a
+sorttest: insertionSort.o selectionSort.o heapSort.o unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
