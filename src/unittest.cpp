@@ -57,3 +57,18 @@ TEST(heapSort, build_max_heap) {
     ASSERT_EQ(4, ht[8]);
     ASSERT_EQ(1, ht[9]);
 }
+
+TEST(heapSort, sortedDesc) {
+    std::vector<int> ht {4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
+    heapSortDesc(ht);
+    ASSERT_EQ(16, ht[0]);
+    ASSERT_EQ(14, ht[1]);
+    ASSERT_EQ(10, ht[2]);
+    ASSERT_EQ(9, ht[3]);
+    ASSERT_EQ(8, ht[4]);
+    ASSERT_EQ(7, ht[5]);
+    ASSERT_EQ(4, ht[6]);
+    ASSERT_EQ(3, ht[7]);
+    ASSERT_EQ(2, ht[8]);
+    ASSERT_EQ(1, ht[9]);
+}
