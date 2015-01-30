@@ -30,7 +30,7 @@ void max_heapify(std::vector<int>& v, int i) {
 }
 
 void build_max_heap(std::vector<int>& v) {
-    for (int i = v.size()/2; i >= 0; --i)
+    for (int i = v.size()/2-1; i >= 0; --i)
         max_heapify(v, i);
 }
 
