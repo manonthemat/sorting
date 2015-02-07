@@ -3,6 +3,7 @@
 #include "selectionSort.h"
 #include "heapSort.h"
 #include "quickSort.h"
+#include "bubbleSort.h"
 #include "gtest/gtest.h"
 
 TEST(insertionSort, sorted) {
@@ -86,4 +87,18 @@ TEST(quickSort, sorted) {
     ASSERT_EQ(56, i[6]);
     ASSERT_EQ(25324, i[7]);
 }
+
+TEST(bubbleSort, sorted) {
+    std::vector<int> i {6, -4, 56, 6, 1, 25324, 32, 43};
+    bubbleSort(i);
+    ASSERT_EQ(-4, i[0]);
+    ASSERT_EQ(1, i[1]);
+    ASSERT_EQ(6, i[2]);
+    ASSERT_EQ(6, i[3]);
+    ASSERT_EQ(32, i[4]);
+    ASSERT_EQ(43, i[5]);
+    ASSERT_EQ(56, i[6]);
+    ASSERT_EQ(25324, i[7]);
+}
+
 
